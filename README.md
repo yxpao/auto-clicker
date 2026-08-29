@@ -7,13 +7,13 @@ A modern, high-precision Windows desktop application combining a high-speed **Au
 ## Screenshots
 
 ### 1. Auto Clicker
-![Auto Clicker](assets/autoclicker.png)
+![Auto Clicker](docs/screenshots/autoclicker.png)
 
 ### 2. Macro Studio (Record, Select, Edit & Playback)
-![Macro Studio](assets/macro_studio.png)
+![Macro Studio](docs/screenshots/macro_studio.png)
 
 ### 3. Settings & Presets
-![Settings](assets/settings.png)
+![Settings](docs/screenshots/settings.png)
 
 ---
 
