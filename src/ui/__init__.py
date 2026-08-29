@@ -1,0 +1,1 @@
+"""UI components and styles for Auto Clicker & Macro Studio."""
