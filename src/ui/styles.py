@@ -67,12 +67,14 @@ MAIN_STYLE = """
     outline: none;
 }
 
-QMainWindow {
+QMainWindow, QWidget#centralWidget, QDialog {
     background-color: #0e1015;
+    color: #eef0f6;
+    font-family: 'Segoe UI Variable', 'Segoe UI', 'Inter', system-ui, sans-serif;
+    font-size: 13px;
 }
 
 QWidget {
-    background-color: transparent;
     color: #eef0f6;
     font-family: 'Segoe UI Variable', 'Segoe UI', 'Inter', system-ui, sans-serif;
     font-size: 13px;

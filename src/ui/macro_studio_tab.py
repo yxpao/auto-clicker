@@ -112,6 +112,7 @@ class MacroStudioTab(QWidget):
         self.table.setColumnCount(6)
         self.table.setHorizontalHeaderLabels(["#", "Type", "Details", "Delay", "Duration", "✓"])
         self.table.setAlternatingRowColors(True)
+        self.table.verticalHeader().setVisible(False)
         self.table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeMode.ResizeToContents)
         self.table.horizontalHeader().setSectionResizeMode(1, QHeaderView.ResizeMode.ResizeToContents)
         self.table.horizontalHeader().setSectionResizeMode(2, QHeaderView.ResizeMode.Stretch)
@@ -171,7 +172,7 @@ class MacroStudioTab(QWidget):
         main_layout.addLayout(mid_layout, 1)
 
         # 3. Bottom Playback & Recording Settings Area
-        bottom_box = QGroupBox("⚙️ Playback & Recording Options")
+        bottom_box = QGroupBox("Playback && Recording Options")
         bot_layout = QHBoxLayout(bottom_box)
         bot_layout.setSpacing(20)
 

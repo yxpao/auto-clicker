@@ -59,7 +59,7 @@ class SettingsTab(QWidget):
         layout.addWidget(grp_hotkeys)
 
         # 2. Preset Library & Import / Export
-        grp_presets = QGroupBox("PRESET LIBRARY & STORAGE")
+        grp_presets = QGroupBox("PRESET LIBRARY && STORAGE")
         pre_layout = QVBoxLayout(grp_presets)
         pre_layout.setSpacing(10)
 
@@ -94,7 +94,7 @@ class SettingsTab(QWidget):
         layout.addWidget(grp_presets)
 
         # 3. HUD & Behavior Preferences
-        grp_hud = QGroupBox("OVERLAY & WINDOW PREFERENCES")
+        grp_hud = QGroupBox("OVERLAY && WINDOW PREFERENCES")
         hud_layout = QVBoxLayout(grp_hud)
         hud_layout.setSpacing(8)
 

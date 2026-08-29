@@ -52,7 +52,7 @@ class AutoClickerTab(QWidget):
         row1.setSpacing(14)
 
         # 1. Click Interval Group
-        grp_interval = QGroupBox("⏱️ Click Interval")
+        grp_interval = QGroupBox("Click Interval")
         grid_interval = QGridLayout(grp_interval)
         grid_interval.setSpacing(8)
 
@@ -89,7 +89,7 @@ class AutoClickerTab(QWidget):
         row1.addWidget(grp_interval, 3)
 
         # 2. Click Options Group
-        grp_options = QGroupBox("🖱️ Click Options")
+        grp_options = QGroupBox("Click Options")
         grid_options = QGridLayout(grp_options)
         grid_options.setSpacing(8)
 
@@ -118,7 +118,7 @@ class AutoClickerTab(QWidget):
         row2.setSpacing(14)
 
         # 3. Click Repeat Group
-        grp_repeat = QGroupBox("🔁 Click Repeat")
+        grp_repeat = QGroupBox("Click Repeat")
         vbox_repeat = QVBoxLayout(grp_repeat)
         vbox_repeat.setSpacing(8)
 
@@ -144,20 +144,21 @@ class AutoClickerTab(QWidget):
         row2.addWidget(grp_repeat, 1)
 
         # 4. Cursor Position Group
-        grp_pos = QGroupBox("📍 Cursor Position")
+        grp_pos = QGroupBox("Cursor Position")
         vbox_pos = QVBoxLayout(grp_pos)
-        vbox_pos.setSpacing(8)
+        vbox_pos.setSpacing(6)
 
         self.rb_current_pos = QRadioButton("Current cursor location")
         self.rb_current_pos.setChecked(True)
-        self.rb_fixed_pos = QRadioButton("Fixed coordinate:")
+        self.rb_fixed_pos = QRadioButton("Fixed coordinates:")
 
         self.btn_grp_pos = QButtonGroup(self)
         self.btn_grp_pos.addButton(self.rb_current_pos, 1)
         self.btn_grp_pos.addButton(self.rb_fixed_pos, 2)
 
         coord_row = QHBoxLayout()
-        coord_row.addWidget(self.rb_fixed_pos)
+        coord_row.setSpacing(8)
+        coord_row.addSpacing(24)
         coord_row.addWidget(QLabel("X:"))
         self.spin_fixed_x = QSpinBox()
         self.spin_fixed_x.setRange(0, 99999)
@@ -170,18 +171,19 @@ class AutoClickerTab(QWidget):
         self.spin_fixed_y.setValue(500)
         coord_row.addWidget(self.spin_fixed_y)
 
-        self.btn_pick = QPushButton("🎯 Pick (F8)")
+        self.btn_pick = QPushButton("Pick (F8)")
         self.btn_pick.setObjectName("btn_accent")
         self.btn_pick.clicked.connect(self.start_picking_coords)
         coord_row.addWidget(self.btn_pick)
 
         vbox_pos.addWidget(self.rb_current_pos)
+        vbox_pos.addWidget(self.rb_fixed_pos)
         vbox_pos.addLayout(coord_row)
         row2.addWidget(grp_pos, 1)
         main_layout.addLayout(row2)
 
         # Anti-Detection / Humanizer Settings
-        grp_anti = QGroupBox("🛡️ Anti-Detection & Humanizer (Optional)")
+        grp_anti = QGroupBox("Anti-Detection && Humanizer (Optional)")
         anti_layout = QHBoxLayout(grp_anti)
         anti_layout.setSpacing(16)
 

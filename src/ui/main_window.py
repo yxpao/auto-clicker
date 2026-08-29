@@ -56,6 +56,7 @@ class MainWindow(QMainWindow):
 
     def _init_ui(self) -> None:
         central = QWidget(self)
+        central.setObjectName("centralWidget")
         self.setCentralWidget(central)
         layout = QVBoxLayout(central)
         layout.setContentsMargins(20, 16, 20, 12)
@@ -89,9 +90,9 @@ class MainWindow(QMainWindow):
         self.tab_autoclicker.status_changed.connect(self._on_autoclicker_status)
         self.tab_studio.status_changed.connect(self._on_studio_status)
 
-        self.tabs.addTab(self.tab_autoclicker, "⚡ Auto Clicker")
-        self.tabs.addTab(self.tab_studio, "🎬 Macro Studio")
-        self.tabs.addTab(self.tab_settings, "⚙️ Settings & Presets")
+        self.tabs.addTab(self.tab_autoclicker, "Auto Clicker")
+        self.tabs.addTab(self.tab_studio, "Macro Studio")
+        self.tabs.addTab(self.tab_settings, "Settings && Presets")
         layout.addWidget(self.tabs, 1)
 
         # Status Bar
